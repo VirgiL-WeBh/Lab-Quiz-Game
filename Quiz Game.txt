@@ -1,0 +1,63 @@
+** start of script.js **
+
+const question1 = {
+category: 'Mathematics',
+question: "What's the root square of 100?",
+choices: ["10", "12", "5"],
+answer: "10",
+}
+const question2 = {
+category: "Geography" ,
+question: "What's the capital city of Malaysia?",
+choices: ["Jakarta", "Kuala Lumpur", "Bangkok"],
+answer: "Kuala Lumpur",
+}
+const question3 = {
+category: "Physics" ,
+question: "What is the unit of electric current?",
+choices: ["Volt", "Watt", "Amper"],
+answer: "Amper",
+}
+const question4 = {
+category: "Science",
+question: "What's the name of the closest planet to the sun?",
+choices: ["Jupiter", "Earth", "Mercury"],
+answer: "Mercury",
+}
+const question5 = {
+category: "English",
+question: "Which word is a synonym for 'happy'?",
+choices: ["Sad", "Angry", "Joyful"],
+answer: "Joyful",
+}
+const question6 = {
+category: "History",
+question: "When did World War II start?",
+choices: ["1945", "1940", "1950"],
+answer: "1940",
+}
+let questions = [question1, question2, question3, question4, question5, question6];
+
+function getRandomQuestion(questions) {
+let randomQuestion = Math.floor(Math.random()*questions.length);
+return questions[randomQuestion];
+}
+
+function getRandomComputerChoice(choices) {
+let randomChoice = Math.floor(Math.random()*choices.length);
+return choices[randomChoice];
+}
+
+function getResults(question, computerChoice) {
+if (question.answer === computerChoice)
+{
+return "The computer's choice is correct!"  
+} else {
+  return `The computer's choice is wrong. The correct answer is: ${question.answer}`;
+}
+}
+
+
+
+** end of script.js **
+
